@@ -36,3 +36,37 @@ fun sumaNumerosNegativosTest(): Boolean {
     val expectedValue = -1
     return actualValue == expectedValue
 }
+
+
+
+
+
+
+ejercicio 2
+
+
+fun main() {
+    println("Validar mayoría de edad")
+    if (mayoriaDeEdadTest()) println("passed") else println("Failed")
+    if (edadNegativaTest()) println("passed") else println("Failed")
+}
+
+fun validarMayoriaDeEdad(edad: Int): String {
+    if (edad < 0) return "REJECTED"
+    return if (edad >= 18) "ACCEPTED" else "REJECTED"
+}
+
+fun mayoriaDeEdadTest(): Boolean {
+    val actualValue = validarMayoriaDeEdad(18)
+    val expectedValue = "ACCEPTED"
+    return actualValue == expectedValue
+}
+
+fun edadNegativaTest(): Boolean {
+    val actualValue = validarMayoriaDeEdad(-1)
+    val expectedValue = "REJECTED"
+    return actualValue == expectedValue
+}
+
+
+
